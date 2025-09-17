@@ -1,3 +1,4 @@
+#hw2- Anjali Kalra
 import streamlit as st
 from openai import OpenAI
 import requests
@@ -18,7 +19,7 @@ try:
     import cohere
 except Exception:
     cohere = None
-
+# Claude was not free, gemini and cohere were free
 # ===========================
 # Anthropic model resolution
 # ===========================
