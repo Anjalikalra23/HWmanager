@@ -13,5 +13,8 @@ PyPDF2
 
 faiss-cpu
 sentence-transformers
+langchain
+langchain-community
+
 
 

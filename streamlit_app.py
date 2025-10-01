@@ -1,9 +1,16 @@
 import streamlit as st
-import hw4
 
-st.set_page_config(page_title="Homework Manager", layout="wide")
+st.set_page_config(page_title="HCAI HW5", layout="wide")
+
 st.sidebar.title("Navigation")
-page = st.sidebar.radio("Select a Homework:", ["HW4"])
+st.sidebar.write("Select a page:")
 
-if page == "HW4":
-    hw4.main()
+st.write("# Welcome to the Multi-Page App 🎓")
+
+st.write("""
+This app contains:
+- Lab5 (previous assignment)
+- HW5 (short-term memory chatbot)
+""")
+
+st.sidebar.success("Use the sidebar to switch between Lab5 and HW5 pages.")
