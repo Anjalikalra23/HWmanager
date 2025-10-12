@@ -1,16 +1,34 @@
 import streamlit as st
+import subprocess
+import os
 
-st.set_page_config(page_title="HCAI HW5", layout="wide")
+# ------------------------------------ #
+#        APP CONFIGURATION              #
+# ------------------------------------ #
+st.set_page_config(
+    page_title="HW7 – News Info Bot",
+    page_icon="📰",
+    layout="wide"
+)
 
-st.sidebar.title("Navigation")
-st.sidebar.write("Select a page:")
+st.title("📰 HW7 – News Info Bot (RAG + LLM Re-ranking)")
+st.markdown("""
+### Welcome to your HW7 App!
+This bot retrieves and summarizes news information using RAG and LLM re-ranking.  
+It uses **OpenAI** as the main model and optionally **Cohere** for comparison.  
 
-st.write("# Welcome to the Multi-Page App 🎓")
-
-st.write("""
-This app contains:
-- Lab5 (previous assignment)
-- HW5 (short-term memory chatbot)
+---
+🪄 *Note:* Ensure your `.streamlit/secrets.toml` file has valid API keys before running.
 """)
 
-st.sidebar.success("Use the sidebar to switch between Lab5 and HW5 pages.")
+# ------------------------------------ #
+#          RUN HW7.PY FILE             #
+# ------------------------------------ #
+hw7_path = "hw7.py"
+
+if os.path.exists(hw7_path):
+    with st.spinner("Launching HW7 News Bot..."):
+        # Run HW7.py directly as a Streamlit app
+        subprocess.run(["streamlit", "run", hw7_path])
+else:
+    st.error("❌ HW7 file not found. Please make sure `hw7.py` exists in your workspace.")
