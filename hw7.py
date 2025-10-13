@@ -11,9 +11,10 @@ from langchain_openai import OpenAIEmbeddings
 # ---------------------------------------------------
 # Streamlit Config
 # ---------------------------------------------------
-st.set_page_config(page_title="HW7 – News Reporting Bot", layout="wide")
-st.title("📰 HW7 – News Reporting Bot")
-st.markdown("""
+def run():
+ st.set_page_config(page_title="HW7 – News Reporting Bot", layout="wide")
+ st.title("📰 HW7 – News Reporting Bot")
+ st.markdown("""
 Given a CSV file of news stories, this bot answers questions  
 and finds the most interesting or topic-specific news items.  
 Designed for a **global law firm**.
@@ -203,3 +204,6 @@ if query:
 # Sidebar Bottom
 # ---------------------------------------------------
 st.sidebar.button("🗑️ Clear Conversation", on_click=lambda: st.session_state.clear())
+    
+if __name__ == "__main__":
+    run()
