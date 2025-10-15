@@ -43,7 +43,7 @@ def run():
     # Paths & Model Setup
     # ---------------------------------------------------
     CSV_PATH = "/workspaces/HWmanager/data/vector_db_hw7/Example_news_info_for_testing.csv"
-    VECTOR_DB_PATH = "vectordb/hw7_vector_db"
+    VECTOR_DB_PATH = "vectordb/vector_db_hw7"
 
     openai_client = OpenAI(api_key=openai_key)
     cohere_client = cohere.Client(api_key=cohere_key) if cohere_key else None
